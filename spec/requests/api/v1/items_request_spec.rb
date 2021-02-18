@@ -48,6 +48,18 @@ describe "Item API" do
       expect(item[:data][:attributes]).to have_key(:unit_price)
       expect(item[:data][:attributes]).to have_key(:merchant_id)
     end
+    it "returns 404 if a bad/nonexistant item id is queried" do
+      get "/api/v1/items/1000000"
+
+      expect(response.status).to eq(404)
+    end
+
+    it "returns 404 if a string id is queried" do
+      get "/api/v1/items/'1'"
+
+      expect(response.status).to eq(404)
+    end
+    
   end
   describe 'Items Create' do
     it 'can create a new item' do
