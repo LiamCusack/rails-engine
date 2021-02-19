@@ -8,7 +8,7 @@ describe "merchant search" do
     get "/api/v1/merchants/find?name=#{merchant1.name}"
 
     merchant = JSON.parse(response.body, symbolize_names: true)
-    binding.pry
+
     expect(response).to be_successful
     expect(merchant[:data][:attributes][:name]).to eq(Merchant.first.name)
   end

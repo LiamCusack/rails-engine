@@ -17,6 +17,8 @@ gem 'bootsnap'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'fast_jsonapi'
+gem 'jquery-rails'
+gem 'faraday'
 
 gem 'bacon', '~> 1.2'
 gem 'bacon-bits', '~> 0.1.0'
