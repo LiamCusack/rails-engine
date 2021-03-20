@@ -1,0 +1,2 @@
+- name: Install Octopus-CLI
+  uses: OctopusDeploy/install-octocli@v1
