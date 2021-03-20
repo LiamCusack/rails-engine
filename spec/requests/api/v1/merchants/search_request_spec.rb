@@ -13,3 +13,5 @@ describe "merchant search" do
     expect(merchant[:data][:attributes][:name]).to eq(Merchant.first.name)
   end
 end
+
+## testing
